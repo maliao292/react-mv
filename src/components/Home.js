@@ -6,5 +6,6 @@ class Home extends Comeponent {
         return (
             <div>Home</div>
         )
+        
     }
 }
