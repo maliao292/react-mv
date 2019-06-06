@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
 import './assets/css/App.css';
-
+import Home from './components/Home';
+import New from './components/New'
 class App extends Component {
   render(){
      return (
       <div className="App">
-        nihao ama
+        <Home></Home>
+        <New></New>
     </div>
     );
   }
