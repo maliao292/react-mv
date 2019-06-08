@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { defaultCoreCipherList } from 'constants';
 
 class Home extends Component {
     constructor() {
