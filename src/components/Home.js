@@ -71,7 +71,15 @@ class Home extends React.Component{
         })
 
     }
-
+    inputChange = (e) => {
+        console.log(e.target.value);
+        this.setState({
+            username:e.target.value
+        })
+    }
+    getval = ()=>{
+        console.log(this.state.username)
+    }
     render(){
         return(
             <div>
@@ -116,9 +124,9 @@ class Home extends React.Component{
 
 
                {/* <button onClick={this.setName.bind(this,'张三','李四')}>执行方法传值</button> */}
-
-
-                            
+                     <h2> 表单事件</h2>      
+                     <input type="text" onChange={this.inputChange}/>
+                     <button onClick={this.getval}>获取input值</button>  
             </div>
         )
 
