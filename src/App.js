@@ -9,9 +9,10 @@ class App extends Component {
   render(){
      return (
       <div className="App">
-        <List></List>
-        <TodoList></TodoList>
-      <Reactform></Reactform>
+        {/* <List></List>
+        
+      <Reactform></Reactform> */}
+      <TodoList></TodoList>
         {/* <Home></Home>
         <New></New> */}
     </div>

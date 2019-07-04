@@ -14,7 +14,7 @@ class ReactForm extends Component {
                 { title: '吃饭', checked: false },
                 { title: '敲代码', checked: true },
             ],
-            info: ''
+            info: '备注'
         };
     }
     handelSubmit = (e) => {
@@ -44,6 +44,11 @@ class ReactForm extends Component {
             hobby:hobby
         })
     }
+    handelInfo = (e)=>{
+        this.setState({
+            info:e.target.value
+        });
+    }
     render() {
         return (
             <div>
@@ -60,7 +65,7 @@ class ReactForm extends Component {
                         })}
                     </select>
 
-                    爱好
+                    爱好：
                     {this.state.hobby.map((v,i)=>{
                             return (
                                 <span>
@@ -68,6 +73,10 @@ class ReactForm extends Component {
                                 </span>
                             ) 
                         })}
+
+                    备注：
+                    <textarea value={this.state.info} onChange={this.handelInfo}/>
+                    {this.state.info}
                 </form>
             </div>
         );
