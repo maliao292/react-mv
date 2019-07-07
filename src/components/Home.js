@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../assets/css/index.css';
-
+import Header from './Header'
 
 class Home extends React.Component{
 
@@ -12,7 +12,7 @@ class Home extends React.Component{
 
         this.state={
 
-            msg:'我是一个home组件',
+            msg:'我是一个HEARDERhome组件',
 
             message:'我是一个message',
 
@@ -72,7 +72,6 @@ class Home extends React.Component{
 
     }
     inputChange = (e) => {
-        console.log(e.target.value);
         this.setState({
             username:e.target.value
         })
@@ -83,6 +82,7 @@ class Home extends React.Component{
     render(){
         return(
             <div>
+                <Header></Header>  
                 <h2>{this.state.msg}</h2>    
 
 
