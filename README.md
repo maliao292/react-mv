@@ -33,4 +33,14 @@ fun function(e) {
  <span onClcik={this.props.getDate}></span>
 
  # 子组件向父组件传值
- 
+
+1、父组件定义方法 接收参数 result
+    getChildDate = (result) => {
+        this.setState({msg:result})
+    }
+2、将方法传给子组件<Header getChildDate={this.getChildDate}></Header>
+3、子组件 执行方法 并传参
+        <button onClick={this.props.getChildDate.bind(this,this.state.msg)}>子组件给父组件传值</button>   
+# 父组件主动获取 子组件
+    1、调用子组件的时候指定ref 的值，<Header ref='header'></Header>
+    2、通过this.refs.header 获取整个子组件实例
