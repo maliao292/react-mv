@@ -27,7 +27,10 @@ fun function(e) {
  ### 获取父组件方法  同传值
  --- 可以在子组件方法调用
  childFun = ()=>{
-     this.props.parent.getDate
+     this.props.getDate
  }
  --- 可以在标签内使用
- <span onClcik={this.props.parent.getDate}></span>
+ <span onClcik={this.props.getDate}></span>
+
+ # 子组件向父组件传值
+ 

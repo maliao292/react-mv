@@ -5,12 +5,15 @@ class Header extends Component {
         this.state = { 
             msg:"this is header"
           };
-          {this.props.fun.toHeaderFun}
+         this.props.fun()
     }
+
     render() {
         return (
                 <div>
-                    {this.props.msg}
+                    {this.props.msg}{this.state.msg}
+                    <button onClick={this.props.fun}>RUN</button>
+                    <button onClick={this.props.getChildDate.bind(this,this.state.msg)}>子组件给父组件传值</button>    
                 </div>
         );
     }
