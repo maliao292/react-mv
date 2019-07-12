@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 class Header extends Component {
     constructor(props) {
         super(props);
@@ -11,6 +12,7 @@ class Header extends Component {
     render() {
         return (
                 <div>
+                    <h1>{this.props.title}</h1>
                     {this.props.msg}{this.state.msg}
                     <button onClick={this.props.fun}>RUN</button>
                     <button onClick={this.props.getChildDate.bind(this,this.state.msg)}>子组件给父组件传值</button>    
@@ -18,5 +20,11 @@ class Header extends Component {
         );
     }
 }
-
+// 默认值
+Header.defaultProps = {
+    title:'标题',
+}
+Header.propTypes = {
+    title:PropTypes.number
+}
 export default Header;

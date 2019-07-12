@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header'
 import Footer from './Footer'
+import Axios from './Axios';
 class News extends Component {  // 继承Component 的第二种写法
     constructor(props) {
         super(props);
@@ -21,7 +22,8 @@ class News extends Component {  // 继承Component 的第二种写法
     render(){
         return (
             <div>
-                <Header msg={this.state.msg} fun={this.toHeaderFun} getChildDate={this.getChildDate}></Header>
+                <Axios></Axios>
+                <Header msg={this.state.msg} fun={this.toHeaderFun} getChildDate={this.getChildDate} title={222}></Header>
                 <Footer ref='footer'></Footer>
                 <button onClick={this.getAllFooter}> 获取Footer </button>
             </div>

@@ -44,3 +44,27 @@ fun function(e) {
 # 父组件主动获取 子组件
     1、调用子组件的时候指定ref 的值，<Header ref='header'></Header>
     2、通过this.refs.header 获取整个子组件实例
+
+# props
+defaultProps ：在子组件 后设置 默认值（调用时未传值，详见：Header.js）
+## propTypes
+--1、 引入 import PropTypes from 'prop-types';
+--Header.propTypes = {  // 使用，详见：Header.js
+    title：PropType.string
+}
+
+
+# axios
+1、 安装 npm install axios --save  // -save 保存到项目中
+2、 引入 import axios from 'axios'
+3、使用
+
+## jsonp  fetch-jsonp
+-- axios 不支持jsonp 使用 fetch-jsonp
+安装: npm install fetch-jsonp
+引用 fetchJsonp: import fetchJsonp from 'fetch-jsonp'  
+使用 fetchJsonp('/api.jsonp').then((response)=>{
+    return response.json()
+    }).then((json)=>{
+        console.log(json)
+    })
