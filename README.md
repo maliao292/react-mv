@@ -75,3 +75,14 @@ defaultProps ：在子组件 后设置 默认值（调用时未传值，详见�
 ## 数据更新  是否更新 shouldComponentUpdate（函数需要返回 true 详见lifeCycle.js）,(数据)将要更新 componentWillUpdate  ，组件更新完成 componentDidUpdate
 ## 组件销毁前，将要销毁 componentWillUnmont  （销毁方法 详见：lifeCycle）
 ## 父组件传值 改变props 传值触发 componentWillReceiveProps
+
+# router 路由配置 
+## exact 表示严格匹配
+1、安装react-router-dom : npm install react-router-dom --save
+2、找到项目的根组件引入 react-router-dom
+    import {BrowserRouter as Router,Router ,link} from 'react-router-dom';
+3、<Router>
+     <Route exact path="/news" component={News}></Route>
+     <Route path="/news" component={News}></Route>
+   </Router>
+
