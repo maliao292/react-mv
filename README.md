@@ -71,3 +71,7 @@ defaultProps ：在子组件 后设置 默认值（调用时未传值，详见�
 
 
 # 生命周期函数
+## 组件将要挂载 组件加载触发 构造函数 constructor 、组件将要挂载 componentWillMont、数据渲染 render、组件挂载完成componentDidmont（操作DOM,请求数据）
+## 数据更新  是否更新 shouldComponentUpdate（函数需要返回 true 详见lifeCycle.js）,(数据)将要更新 componentWillUpdate  ，组件更新完成 componentDidUpdate
+## 组件销毁前，将要销毁 componentWillUnmont  （销毁方法 详见：lifeCycle）
+## 父组件传值 改变props 传值触发 componentWillReceiveProps
