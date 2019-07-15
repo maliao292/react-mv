@@ -10,7 +10,7 @@ class product extends Component {
                 { aid: 1, title: '商品1' },
                 { aid: 2, title: '商品2' },
                 { aid: 3, title: '商品3' },
-                { aid: 4, title: '商品4' },
+                { aid: 4, title: '商品4' }, 
                 { aid: 5, title: '商品5' },
             ]
          };
@@ -23,7 +23,7 @@ class product extends Component {
                     {this.state.list.map((v, i) => {
                         return (
                             <li key={v.aid}>
-                               <Link to={`/ProductContent/${v.aid}`}>{v.title}</Link> 
+                               <Link to={`/ProductContent?aid=${v.aid}`}>{v.title}</Link> 
                             </li>
                         )
                     })}
