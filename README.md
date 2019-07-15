@@ -88,10 +88,11 @@ defaultProps ：在子组件 后设置 默认值（调用时未传值，详见�
 4. 点击标签: <link to="/news">新闻</link>
 
 ## router传值
-1、get传值
+
+1、 get传值
     1. <Link to={`/ProductContent?aid=${v.aid}`}>{v.title}</Link> 
     2. 对应页面取值 this.props.location.search.substr(1).split('=')[1]
-2、动态路由(详见 News.js-->Product.js)
+2、 动态路由(详见 News.js-->Product.js)
     1. 跳转 <Route path="/content/:aid" component={Content}></Route>
     2. 传参aid <Link to={`/content/${v.aid}`}>{v.title}</Link> 
     3. 对应页面取值 this.props.match.params.aid
