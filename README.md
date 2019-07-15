@@ -85,11 +85,13 @@ defaultProps ：在子组件 后设置 默认值（调用时未传值，详见�
      <Route exact path="/news" component={News}></Route>
      <Route path="/news" component={News}></Route>
    </Router>`
+4. 点击标签: <link to="/news">新闻</link>
 
-
-6、列表 
-1. 项目1  
-2. 项目2  
-3. 项目3  
-   * 项目1 （一个*号会显示为一个黑点，注意⚠️有空格，否则直接显示为*项目1） 
-   * 项目2 
+## router传值
+1、get传值
+    1. 
+2、动态路由(详见 News.js-->Product.js)
+    1. 跳转 <Route path="/content/:aid" component={Content}></Route>
+    2. 传参aid <Link to={`/content/${v.aid}`}>{v.title}</Link> 
+    3. 对应页面取值 this.props.match.params.aid
+     

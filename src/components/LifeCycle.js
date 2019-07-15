@@ -9,7 +9,7 @@ class LifeCycle extends Component {
         return 
     }
     componentWillUnmount(){
-        console.log('lifeCycle销毁')
+        // console.log('lifeCycle销毁')
     }
     render() {
         return (
