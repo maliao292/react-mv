@@ -81,8 +81,8 @@ defaultProps ：在子组件 后设置 默认值（调用时未传值，详见�
 1、安装react-router-dom : npm install react-router-dom --save
 2、找到项目的根组件引入 react-router-dom
     import {BrowserRouter as Router,Router ,link} from 'react-router-dom';
-3、<Router>
+3、```<Router>
      <Route exact path="/news" component={News}></Route>
      <Route path="/news" component={News}></Route>
-   </Router>
+   </Router>```
 
