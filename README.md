@@ -97,4 +97,11 @@ defaultProps ：在子组件 后设置 默认值（调用时未传值，详见�
 1. 跳转 `<Route path="/content/:aid" component={Content}></Route>`
 2. 传参aid <Link to={`/content/${v.aid}`}>{v.title}</Link> 
 3. 对应页面取值 this.props.match.params.aid
+
+# 解析HTML
+*`<div dangerouslySetInnerHTML={{_html:this.state.list.content}}></div>`*
+
+# 登录
+## 实现js跳转路由
+1、引入：`import {BrowserRouter as Router,Route,Link,Readirect} from "react-router-dom"`
      
