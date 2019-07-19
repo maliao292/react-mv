@@ -10,6 +10,7 @@ import Content from './components/Cotent';
 import News from './components/New';
 import Home from './components/Home';
 import Product from './components/Product';
+import Login from './components/Login';
 import ProductContent from './components/ProductContent';
 
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
@@ -23,10 +24,12 @@ class App extends Component {
           <Link to="/" className="menu-link">Home</Link>
           <Link to="/product" className="menu-link">产品</Link>
           <Link to="/content/5" className="menu-link">新闻详情</Link>
+          <Link to="/login" className="menu-link">登录页</Link>
           </div>
 
 
           <Route exact  path="/" component={Home}></Route>
+          <Route path="/login" component={Login}></Route>
           <Route path="/news" component={News}></Route>
           <Route path="/news" component={News}></Route>
           <Route path="/news" component={News}></Route>
