@@ -28,9 +28,12 @@ class App extends Component {
 
           <Route exact  path="/" component={Home}></Route>
           <Route path="/news" component={News}></Route>
+          <Route path="/news" component={News}></Route>
+          <Route path="/news" component={News}></Route>
           <Route path="/product" component={Product}></Route>
           <Route path="/content/:aid" component={Content}></Route>
-          <Route path="/ProductContent" component={ProductContent}></Route>
+          <Route path="/ProductContent
+          " component={ProductContent}></Route>
 
         </Router>
         {/* <List></List> */}
