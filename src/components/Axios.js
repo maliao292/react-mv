@@ -15,22 +15,17 @@ class Axios extends Component {
         })
     }
     render() {
-        return ( <
-            div >
-            <
-            h3 > http: //www.phonegap100.com/appapi.php?a=getPortalList&catid=20</h3>
-            <
-            h1 > Axios传值 < /h1> <
-            button onClick = { this.getData } > 获取服务器API接口数据 < /button> <
-            div > {
-                this.state.list.map((value, i) => {
-                        return ( < div key = { i } > { value.title } < /div>)
+        return (
+            <div>
+                <h3> http: //www.phonegap100.com/appapi.php?a=getPortalList&catid=20</h3>
+                <h1> Axios传值 </h1> <button onClick={this.getData} > 获取服务器API接口数据 </button><div>
+                    {
+                        this.state.list.map((value, i) => {
+                            return (< div key={i} > {value.title} </div>)
                         })
-                } <
-                /div> <
-                /div>
-            );
-        }
+                    } </div> </div>
+        );
     }
+}
 
-    export default Axios;
+export default Axios;

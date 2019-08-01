@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 // import '../assets/css/index.css';
 // import Header from './Header'
 
@@ -83,6 +83,7 @@ class Home extends React.Component{
         return(
             <div>
                 {/* <Header></Header>   */}
+                <button><Link to={`/login`}>跳转到登录</Link></button>
                 <h2>{this.state.msg}</h2>    
 
 

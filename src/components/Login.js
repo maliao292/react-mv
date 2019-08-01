@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, Readirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            logmsg:'登录',
+            logmsg: '登录',
             username: '',
             password: '',
             loginFlag: false
@@ -18,21 +18,23 @@ class Login extends Component {
             username,
             password
         });
-        if(username === "mario"&&password === "123"){
+        if (username === "mario" && password === "123") {
             this.setState({
-            logmsg:'登录成功',
-        });
-        }else{
-             this.setState({
-            logmsg:'登录失败',
-        });
+                logmsg: '登录成功',
+                loginFlag:true
+            });
+        } else {
+            this.setState({
+                logmsg: '登录失败',
+            });
         }
     }
     render() {
         const { from } = this.props.location.state || { from: { pathname: "/" } }
-        if(this.state.loginFlag === true){
-
+        if (this.state.loginFlag) {
+            return <Redirect to={{ from }} />;
         }
+
         return (
             <div>
                 <form onSubmit={this.doLogin} >
