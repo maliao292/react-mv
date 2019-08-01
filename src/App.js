@@ -15,7 +15,6 @@ import User from './components/User';
 import Product from './components/Product';
 import Login from './components/Login';
 import ProductContent from './components/ProductContent';
-
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 class App extends Component {
   render() {
